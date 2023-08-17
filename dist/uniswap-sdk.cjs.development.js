@@ -28,6 +28,7 @@ var _SOLIDITY_TYPE_MAXIMA;
   ChainId[ChainId["XDAI"] = 100] = "XDAI";
   ChainId[ChainId["BASE_TESTNET"] = 84531] = "BASE_TESTNET";
   ChainId[ChainId["BASE"] = 8453] = "BASE";
+  ChainId[ChainId["OPBNB"] = 204] = "OPBNB";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -41,8 +42,8 @@ var _SOLIDITY_TYPE_MAXIMA;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(exports.Rounding || (exports.Rounding = {}));
 
-var FACTORY_ADDRESS = '0xA4679b38EaefFa2dcF91dd7cc11149C5330529Dd';
-var INIT_CODE_HASH = '0xdc3c701f36741323a23932fc7df1c0ee1dc18cb43eceee1e571a08eed3eafa1c';
+var FACTORY_ADDRESS = '0xAe9F4488CC751637b18070c5453a3b7Acc137a3b';
+var INIT_CODE_HASH = '0x64119c1136091336c815bef7f59dccfcb0c4d70d3f363bc650cc3d1ca9de56f4';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -375,7 +376,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'ETH', 'ETH');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'BNB', 'BNB');
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -441,7 +442,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.ROPSTEN] = /*#__PURE__*/new Token(exports.ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.GÖRLI] = /*#__PURE__*/new Token(exports.ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.KOVAN] = /*#__PURE__*/new Token(exports.ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.XDAI] = /*#__PURE__*/new Token(exports.ChainId.XDAI, '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d', 18, 'WXDAI', 'Wrapped XDAI'), _WETH[exports.ChainId.BASE_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.BASE_TESTNET, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped ETH'), _WETH[exports.ChainId.BASE] = /*#__PURE__*/new Token(exports.ChainId.BASE, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped ETH'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.ROPSTEN] = /*#__PURE__*/new Token(exports.ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.GÖRLI] = /*#__PURE__*/new Token(exports.ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.KOVAN] = /*#__PURE__*/new Token(exports.ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.XDAI] = /*#__PURE__*/new Token(exports.ChainId.XDAI, '0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d', 18, 'WXDAI', 'Wrapped XDAI'), _WETH[exports.ChainId.BASE_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.BASE_TESTNET, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped ETH'), _WETH[exports.ChainId.BASE] = /*#__PURE__*/new Token(exports.ChainId.BASE, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped ETH'), _WETH[exports.ChainId.OPBNB] = /*#__PURE__*/new Token(exports.ChainId.OPBNB, '0x4200000000000000000000000000000000000006', 18, 'WBNB', 'Wrapped BNB'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
